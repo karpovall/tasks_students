@@ -224,6 +224,7 @@ class LifeGame:
                     return 3
                 else:
                     return 0
+        return 0
 
     def get_next_generation(self) -> list[list[int]]:
         if self.columns == 1 and self.rows == 1:

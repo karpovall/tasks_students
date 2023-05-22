@@ -2,7 +2,7 @@ import dis
 import types
 
 
-def code_(code, list_) -> list:
+def code_(code: types.CodeType, list_: list[str]) -> list[str]:
     instructions = dis.get_instructions(code)
     for instruction in instructions:
         list_.append(instruction.opname)
@@ -20,7 +20,7 @@ def count_operations(source_code: types.CodeType) -> dict[str, int]:
     :return: operation counts
     """
     dict_ = {}
-    list_ = []
+    list_: list[str] = []
     a = code_(source_code, list_)
     for i in range(len(a)):
         dict_[a[i]] = a.count(a[i])

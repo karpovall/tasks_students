@@ -1,4 +1,4 @@
-def mount(a: list[int]):
+def mount(a: list[int]) -> bool:
 
     if not a:
         return False

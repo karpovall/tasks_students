@@ -43,6 +43,7 @@ def get_max_element_index(elements: list[int]) -> tp.Optional[int]:
     for i in range(0, len(elements)):
         if elements[i] == max1:
             return i
+    return 0
 
 
 # ====================================================================================================

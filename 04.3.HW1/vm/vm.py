@@ -35,7 +35,7 @@ class Frame:
     def top(self) -> tp.Any:
         return self.data_stack[-1]
 
-    def peek(self, n):
+    def peek(self, n: int) -> tp.Any:
         return self.data_stack[-n]
 
     def pop(self) -> tp.Any:
@@ -459,11 +459,8 @@ class Frame:
     def load_assertion_error_op(self, arg: str) -> None:
         self.push(AssertionError)
 
-    def raise_varargs_op(self, arg: int):
-        ex = val = tb = None
-        if arg == 0:
-            ex, val, tb = self.last_exception
-        elif arg == 1:
+    def raise_varargs_op(self, arg: int) -> None:
+        if arg == 1:
             ex = self.pop()
         elif arg == 2:
             val = self.pop()
@@ -472,6 +469,7 @@ class Frame:
             tb = self.pop()
             val = self.pop()
             ex = self.pop()
+
 
     def build_tuple_op(self, arg: int) -> None:
         el = self.popn(arg)
@@ -492,7 +490,7 @@ class Frame:
         tos = self.pop()
         self.push(tuple(tos))
 
-    def store_map_op(self):
+    def store_map_op(self) -> None:
         the_map, val, key = self.popn(3)
         the_map[key] = val
         self.push(the_map)
@@ -543,17 +541,17 @@ class Frame:
         the_map = self.peek(arg)
         the_map[key] = val
 
-    def import_name_op(self, name) -> None:
+    def import_name_op(self, name: str) -> None:
         level, fromlist = self.popn(2)
         self.push(
             __import__(name, self.globals, self.locals, fromlist, level)
         )
 
-    def import_from_op(self, name) -> None:
+    def import_from_op(self, name: str) -> None:
         mod = self.top()
         self.push(getattr(mod, name))
 
-    def import_star_op(self, name) -> None:
+    def import_star_op(self, name: str) -> None:
         mod = self.pop()
         for attr in dir(mod):
             if attr[0] != '_':
@@ -574,7 +572,7 @@ class Frame:
         val, obj = self.popn(2)
         setattr(obj, arg, val)
 
-    def delete_attr_op(self, arg) -> None:
+    def delete_attr_op(self, arg: str) -> None:
         obj = self.pop()
         delattr(obj, arg)
 

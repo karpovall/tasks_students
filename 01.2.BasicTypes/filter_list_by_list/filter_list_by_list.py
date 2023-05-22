@@ -9,10 +9,10 @@ def filter_list_by_list(lst_a: tp.Union[list[int], range], lst_b: tp.Union[list[
     :return: filtered sorted list
     """
 
-    final = []
+    final: list[int] = []
     a, b = 0, 0
     if not lst_b or not lst_a:
-        return lst_a
+        return list[int] (lst_a)
     while a < len(lst_a):
         if lst_a[a] > lst_b[b]:
             if b < len(lst_b) - 1:
