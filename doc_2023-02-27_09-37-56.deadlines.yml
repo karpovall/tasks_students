@@ -1,0 +1,217 @@
+- group: HW.6[hard]
+  start: 06-05-2022 21:00
+  deadline: 20-05-2022 23:00
+  second_deadline: 27-05-2022 23:00
+  enabled: true
+  tasks:
+    - task: visualization
+      score: 30
+    - task: music_api
+      score: 30
+
+- group: HW.6
+  start: 06-05-2022 21:00
+  deadline: 20-05-2022 23:00
+  second_deadline: 21-05-2022 23:00
+  enabled: true
+  tasks:
+    - task: numpy_basic
+      score: 20
+    - task: replace_nans
+      score: 5
+    - task: nonzero_product
+      score: 5
+    - task: nearest_value
+      score: 5
+    - task: max_element
+      score: 5
+    - task: add_zeros
+      score: 5
+    - task: vander
+      score: 5
+    - task: titanic
+      score: 30
+
+- group: HW.5[hard]
+  start: 20-04-2022 21:00
+  deadline: 12-05-2022 23:00
+  second_deadline: 27-05-2022 23:00
+  enabled: true
+  tasks:
+    - task: property_converter
+      score: 50
+    - task: temperature
+      score: 30
+
+- group: HW.5
+  start: 20-04-2022 21:00
+  deadline: 11-05-2022 23:00
+  second_deadline: 12-05-2022 23:00
+  enabled: true
+  tasks:
+    - task: warm_up
+      score: 10
+    - task: flat_it
+      score: 20
+    - task: range
+      score: 20
+    - task: animals
+      score: 20
+    - task: banner_engine
+      score: 20
+    - task: life_game
+      score: 20
+    - task: list_twist
+      score: 20
+    - task: orders
+      score: 20
+
+- group: HW.4[hard]
+  start: 06-04-2022 21:00
+  deadline: 27-05-2022 23:00
+  second_deadline: 27-05-2022 23:00
+  enabled: true
+  tasks:
+    - task: vm
+      score: 400
+      scoring_func: latest
+
+- group: HW.4
+  start: 06-04-2022 21:00
+  deadline: 20-04-2022 23:00
+  second_deadline: 21-04-2022 23:00
+  enabled: true
+  tasks:
+    - task: roman_to_int
+      score: 5
+    - task: calc
+      score: 5
+    - task: byteme
+      score: 10
+    - task: codeops
+      score: 10
+    - task: profiler
+      score: 15
+    - task: lru_cache
+      score: 15
+    - task: arg_binding
+      score: 20
+
+- group: HW.3[hard]
+  start: 23-03-2022 21:00
+  deadline: 10-04-2022 23:00
+  second_deadline: 27-05-2022 23:00
+  enabled: true
+  tasks:
+    - task: tail
+      score: 20
+    - task: git_blob
+      score: 30
+
+- group: HW.3
+  start: 23-03-2022 21:00
+  deadline: 10-04-2022 23:00
+  second_deadline: 11-04-2022 23:00
+  enabled: true
+  tasks:
+    - task: length_of_last_word
+      score: 5
+    - task: git_log
+      score: 5
+    - task: spiral_matrix
+      score: 5
+    - task: is_power_of_two
+      score: 5
+    - task: count_util
+      score: 5
+    - task: merge_lists_3
+      score: 10
+    - task: normalize_path
+      score: 10
+    - task: input_
+      score: 10
+
+- group: HW.2[hard]
+  start: 03-03-2022 18:00
+  deadline: 23-03-2022 23:00
+  second_deadline: 27-05-2022 23:00
+  enabled: true
+  tasks:
+    - task: alphabet
+      score: 10
+    - task: banner_search_system
+      score: 10
+    - task: object_by_id
+      score: 15
+    - task: rt_join
+      score: 15
+
+- group: HW.2
+  start: 03-03-2021 18:00
+  deadline: 23-03-2022 23:00
+  second_deadline: 24-03-2022 23:00
+  enabled: true
+  tasks:
+    - task: reverse_dict
+      score: 5
+    - task: min_to_drop
+      score: 5
+    - task: comprehensions
+      score: 5
+    - task: caesar_cipher
+      score: 5
+    - task: traverse_dictionary
+      score: 10
+    - task: merge_lists_2
+      score: 10
+    - task: bin_peak
+      score: 10
+    - task: bin_min
+      score: 10
+
+- group: HW.1[hard]
+  start: 24-02-2022 21:00
+  deadline: 09-03-2022 23:59
+  second_deadline: 27-05-2022 23:59
+  enabled: true
+  tasks:
+    - task: common_type
+      score: 10
+    - task: common_type_2
+      score: 10
+    - task: bin_tricky
+      score: 10
+
+- group: HW.1
+  start: 24-02-2022 21:00
+  deadline: 09-03-2022 23:59
+  second_deadline: 12-03-2022 23:59
+  enabled: true
+  tasks:
+    - task: middle_value_of_triple
+      score: 5
+    - task: fizz_buzz
+      score: 5
+    - task: iterate_me
+      score: 5
+    - task: reverse_list
+      score: 5
+    - task: merge_lists
+      score: 10
+    - task: filter_list_by_list
+      score: 10
+    - task: two_sum
+      score: 10
+    - task: make_assert
+      score: 10
+    - task: bin_basic
+      score: 10
+
+- group: 01.1.PythonTools
+  start: 24-01-2022 18:00
+  deadline: 24-02-2022 23:59
+  second_deadline: 27-02-2022 23:59
+  enabled: true
+  tasks:
+    - task: hello_world
+      score: 10
