@@ -127,11 +127,11 @@ class Frame:
         self.push(arg)
 
     def load_fast_op(self, arg: tp.Any) -> None:
-        try:
+        if arg in self.locals:
             a = self.locals[arg]
             self.push(a)
-        except KeyError:
-            self.return_value(self)
+        else:
+            raise ValueError
 
     def store_name_op(self, arg: str) -> None:
         """
@@ -459,7 +459,7 @@ class Frame:
     def load_assertion_error_op(self, arg: str) -> None:
         self.push(AssertionError)
 
-    def raise_varargs_op(self, arg: int) -> None:
+    def raise_varargs_op(self, arg: int):
         ex = val = tb = None
         if arg == 0:
             ex, val, tb = self.last_exception
